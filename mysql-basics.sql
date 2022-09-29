@@ -443,18 +443,11 @@ FROM
     employees;
 
 -- We delete all employees with a salary greater than 20,000.
-DELETE employees
-WHERE
-    emp_no IN (
-        SELECT
-            E.emp_no
-        FROM
-            employees E
-            JOIN salaries S ON E.emp_no = S.emp_no
-        WHERE
-            S.salary > 20000
-            AND S.to_date >= CURDATE()
-    );
+DELETE employees, salaries
+FROM
+    employees
+    INNER JOIN salaries ON salaries.emp_no = employees.emp_no
+    AND salaries.salary > 20000;
 
 -- We remove the department that has more employees.
 DELETE FROM
