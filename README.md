@@ -8,5 +8,5 @@ Intro pill which served as our first contact with the DBMS "MySQL", where we set
 This repository contains only the following files:
 
 README.md: this explanatory file.
-employees.sql: file containing an example database provided by the official MySQL team, to import and use in our exercise.
-queries.sql: file where we recorded all the necessary queries executed to fulfill this exercise.
+· employees.sql: file containing an example database provided by the official MySQL team, to import and use in our exercise.
+· queries.sql: file where we recorded all the necessary queries executed to fulfill this exercise.
